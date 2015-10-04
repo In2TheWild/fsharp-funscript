@@ -10,12 +10,20 @@ open System
 
 [<ReflectedDefinition>]
 module Jw =
-    let document = Globals.document
-    let main() =
-        let div = document.getElementById("content")
+
+    let sayHello() =
+        let div = Globals.document.getElementById("hello")
         div.innerHTML <- "<span>Hello</span>"
         div.style.top <- "100px"
-        
+
+    let goHome() =
+        let div = Globals.document.getElementById("home")
+        div.innerText <- "go home, now!"
+
+    let main() =
+        sayHello()
+        goHome()
+
     let compile() =
         Compiler.Compile(
                 <@ main @>,

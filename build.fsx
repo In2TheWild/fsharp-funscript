@@ -51,7 +51,7 @@ Target "watch" (fun _ ->
     ==> "locate"
     ==> "execute"
 
-RunTargetOrDefault "watch"
+RunTargetOrDefault "jw.exe"
 
 
 
